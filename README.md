@@ -23,6 +23,7 @@ await pipeline(
 <img 
     src="https://i.ytimg.com/vi/rqvA7T5FUTQ/maxresdefault.jpg"
     align="center"
+    width="480"
 />
 
 ## 🤯 Demo
