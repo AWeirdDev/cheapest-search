@@ -84,13 +84,13 @@ class Agent:
                     "usage", res.usage.completion_tokens, res.usage.prompt_tokens
                 )
 
-            if (
-                self.messages
-                and self.messages[-1]["role"] == "user"
-                and self.messages[-1]["content"].startswith("SYSTEM\n")
-            ):
-                self.messages.pop(-1)
-                self.messages.append({"role": "user", "content": "SYSTEM\n..."})
+            # if (
+            #     self.messages
+            #     and self.messages[-1]["role"] == "user"
+            #     and self.messages[-1]["content"].startswith("SYSTEM\n")
+            # ):
+            #     self.messages.pop(-1)
+            #     self.messages.append({"role": "user", "content": "SYSTEM\n..."})
 
             fmt = Formatter(content)
             self.messages.append({"role": "assistant", "content": fmt.response})
