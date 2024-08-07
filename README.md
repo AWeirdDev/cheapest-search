@@ -28,7 +28,9 @@ await pipeline(
 ## 🤯 Demo
 This emoji is cringe.
 
-https://raw.githubusercontent.com/AWeirdDev/cheapest-search/main/assets/demo.mp4
+https://github.com/user-attachments/assets/59d7d77e-2809-444e-aa2c-96c6897723c3
+
+/assets/demo.mp4
 
 ## 🐣 Essentials
 Yo is that Chick Fil-a? Anyway, let's see what we need to do first. That is:
