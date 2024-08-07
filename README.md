@@ -1,5 +1,5 @@
 # cheapest-search
-Here we have the cheapest search engine to ever exist, with Groq.
+Here we have the cheapest search engine to ever exist, with Groq. Only PERP fans would understand this.
 
 **Key features**:
 - Search on the internet like a human
@@ -19,27 +19,24 @@ await pipeline(
 )
 ```
 
-
-<img 
-    src="https://i.ytimg.com/vi/rqvA7T5FUTQ/maxresdefault.jpg"
-    align="center"
-    width="480"
-/>
-
-## 🤯 Demo
-This emoji is cringe.
-
 https://github.com/user-attachments/assets/59d7d77e-2809-444e-aa2c-96c6897723c3
-
-/assets/demo.mp4
 
 ## 🐣 Essentials
 Yo is that Chick Fil-a? Anyway, let's see what we need to do first. That is:
+- Clone this project
 - Install packages
 - Get your [Groq](https://console.groq.com) API key
 - Configure Groq
 
-## Install Packages
+### i. Cloning
+Clone this project with `git`:
+```bash
+git clone https://github.com/AWeirdDev/cheapest-search
+cd cheapest-search
+```
+
+
+### ii. Install Packages
 Install everything! Don't worry, we strive to keep everything minimal. All you need is the `groq` and my custom `researches` package.
 
 ```bash
@@ -51,7 +48,9 @@ pip install -U groq researches
 > [!NOTE]
 > `httpx` comes along with `groq` or `researches`, so you don't need to install it separately.
 
-### Configuring Groq
+### iii. Configuring Groq
+[Get an API key](https://console.groq.com) first.
+
 We have two ways to configure Groq, yet it's always recommended to use a virtual environment.
 
 <details>
@@ -164,7 +163,41 @@ async def main():
 asyncio.run(main())
 ```
 
-# Support awdev
+## How it works
+We look for information. We search. We extract data. This explains that we humans do when we hop on search engines: to look for the exact piece of information we want! However, sometimes we can't quite see the whole picture: data is everywhere, and considering the average attention we'd all skip for everything and say "i aint reading allat."
+
+What if we let an AI do it? They'll read the data, extract them and generate a brief summary. Isn't that just faster and easier? Plus, if we used Groq, everything is sped up 2-4x!
+
+Let's say we want to search the song "slow dancing in the dark," and we don't know what it's about.
+
+The LLM extracts it, and makes sure what it wants to do.
+
+> **Llama 3** <kbd>AI</kbd>
+> 
+> ```yaml
+> # steps: I should look it up using "search." I should specify the wording "song" in my query otherwise I might get information on a different topic.
+> search: joji slow dancing in the dark song
+> ```
+
+As you can see, the AI is aware of what they should be searching, thanks to the "# steps" comment, making the AI more clear of the context.
+
+We then parse the response, format the grammar to meet our requirements, and search it on the web with `researches`.
+
+Repeat the loop, and we can get fascinating results!
+
+## Questions
+It's funny, no one has ever "frequently" asked those questions from the FAQs if you really think about it.
+
+**What does this differ from MindSearch?**<br />
+MindSearch is made in China and this is made in Taiwan. To be more explicit, this project strives to keep everything simple since extra dependencies are always frustrating!
+
+**Is there an API documentation?**<br />
+I'll consider making one. [Issues](https://github.com/AWeirdDev/cheapest-search/issues/new?title=gimme+gimme+docs)
+
+**How can I get started?**<br />
+Read the "Use" category above.
+
+# Donate
 Support this project (and quite possibly, support me) by donating!
 
 [☕ Buy me a coffee!](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAs_TDUTeHiZQ1tqLJlvItaBOjcmRTeoSbHw&s)
