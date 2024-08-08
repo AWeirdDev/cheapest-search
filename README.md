@@ -9,6 +9,8 @@ Here we have the cheapest search engine to ever exist, with Groq. Only PERP fans
 
 This project is not yet installable via `pip`, but it will be supported sooner (I assume). For now, use `git clone` to clone this project and make it yours.
 
+> Beware of Google blocks. You might get blocked for a while if there are mass requests.
+
 ```python
 from search import pipeline
 
